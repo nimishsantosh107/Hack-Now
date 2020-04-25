@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
@@ -34,6 +35,10 @@ public class BusinessAdapter extends ArrayAdapter {
             name.setText(businessItemList.get(position).getName());
             desc.setText(businessItemList.get(position).getDesc());
             //SET BG COLOR & HIDE BUTTON if AD
+            if(businessItemList.get(position).getService().equals("ADS")) {
+                Button donate=view.findViewById(R.id.donateButton);
+                donate.setVisibility(View.GONE);
+            }
 
         }
         else
