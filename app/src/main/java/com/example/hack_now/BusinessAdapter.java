@@ -12,11 +12,11 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommunityAdapter extends ArrayAdapter {
+public class BusinessAdapter extends ArrayAdapter {
     List<String> data=new ArrayList<>();
     Context mContext;
 
-    public CommunityAdapter(Context context, int resource, List<String> data) {
+    public BusinessAdapter(Context context, int resource, List<String> data) {
         super(context, resource, data);
         mContext=context;
 

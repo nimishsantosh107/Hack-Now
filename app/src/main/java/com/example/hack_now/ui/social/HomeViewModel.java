@@ -1,4 +1,4 @@
-package com.example.hack_now.ui.home;
+package com.example.hack_now.ui.social;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -1,4 +1,4 @@
-package com.example.hack_now.ui.notifications;
+package com.example.hack_now.ui.business;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -8,9 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.example.hack_now.ui.dashboard.DashboardFragment;
 
 import java.util.ArrayList;
 import java.util.List;
