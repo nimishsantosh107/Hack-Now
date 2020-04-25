@@ -140,7 +140,7 @@ public class NewsFragment extends Fragment {
                         "    \"postedBy\": \""+postedBy+"\"\n" +
                         "}";
 
-                Log.e("TEST", postBody);
+                Log.e("POSTING", postBody);
                 try {
                     postRequest(postUrl,postBody);
                 } catch (IOException e) {
