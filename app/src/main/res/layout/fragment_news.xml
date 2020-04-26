@@ -2,49 +2,74 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#398185">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/postLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_postform">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
 
             <EditText
                 android:id="@+id/postTitle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Title"/>
+                android:hint="Enter headline"
+                android:textColorHint="#009EFD"
+                android:background="@drawable/custom_postedittext"
+                android:layout_marginBottom="10dp"/>
 
-            <Button
-                android:id="@+id/postButton"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/postText"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:layout_weight="1"
+                android:hint="Enter content"
+                android:textColorHint="#009EFD"
+                android:minLines="1"
+                android:maxLines="4"
+                android:enabled="true"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:isScrollContainer="true"
+                android:focusable="true"
+                android:background="@drawable/custom_postedittext"/>
 
         </LinearLayout>
 
-
-        <EditText
-            android:id="@+id/postText"
+        <Button
+            android:id="@+id/postButton"
+            android:height="10dp"
+            android:width="10dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Enter your post"
-            android:lines="2"/>
+            android:textColor="#fff"
+            android:background="@drawable/custom_addpost_button"
+            android:layout_gravity="center"
+            android:text="POST"
+            />
 
 
     </LinearLayout>
-    
+
     <ListView
         android:id="@+id/newsList"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@id/postLayout"
         />

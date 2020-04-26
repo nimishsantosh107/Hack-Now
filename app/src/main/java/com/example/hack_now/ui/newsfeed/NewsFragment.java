@@ -149,8 +149,6 @@ public class NewsFragment extends Fragment {
             }
         });
 
-        postText.setText("HELO");
-
         try {
             run();
         }
