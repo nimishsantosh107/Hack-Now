@@ -6,14 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+
+import com.google.android.gms.wallet.PaymentsClient;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class BusinessAdapter extends ArrayAdapter {
     List<BusinessItem> businessItemList=new ArrayList<>();
     Context mContext;
+    private PaymentsClient paymentsClient;
 
     public BusinessAdapter(Context context, int resource, List<BusinessItem> businessItemList) {
         super(context, resource, businessItemList);
@@ -36,7 +41,7 @@ public class BusinessAdapter extends ArrayAdapter {
             desc.setText(businessItemList.get(position).getDesc());
             //SET BG COLOR & HIDE BUTTON if AD
             if(businessItemList.get(position).getService().equals("ADS")) {
-                Button donate=view.findViewById(R.id.donateButton);
+                RelativeLayout donate=view.findViewById(R.id.googlePayButton);
                 view.setBackgroundResource(R.drawable.ad_card);
                 donate.setVisibility(View.GONE);
             }

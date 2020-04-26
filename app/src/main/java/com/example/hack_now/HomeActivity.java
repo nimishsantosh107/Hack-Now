@@ -12,8 +12,6 @@ import androidx.navigation.ui.NavigationUI;
 
 public class HomeActivity extends AppCompatActivity {
 
-    public static final String RTMP_BASE_URL = "rtmp://192.168.0.100/LiveApp/";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

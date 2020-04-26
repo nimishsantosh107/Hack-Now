@@ -119,9 +119,11 @@ public class NewsFragment extends Fragment {
         postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String postedBy = "ADMIN";
+                final String postedBy = "GOVT";
                 final String title = postTitle.getText().toString();
                 final String desc = postText.getText().toString();
+                postTitle.setText("");
+                postText.setText("");
 
                 getActivity().runOnUiThread(new Runnable() {
                     @Override

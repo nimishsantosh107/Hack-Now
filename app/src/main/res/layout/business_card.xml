@@ -30,17 +30,21 @@
         android:textSize="20dp"
         android:layout_below="@+id/name"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <include layout="@layout/googlepay_button"
+        android:id="@+id/googlePayButton"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
         android:layout_below="@+id/desc"
-        android:id="@+id/donateButton"
-        android:alpha="0.50"
-        android:background="@drawable/custom_donate_button"
-        android:textColor="#009EFD"
-        android:textStyle="bold"
-        android:textAllCaps="true"
         android:paddingBottom="5dp"
-        android:text="Donate"/>
+        />
+<!--    <Button-->
+
+<!--        -->
+<!--        android:background="@drawable/custom_donate_button"-->
+<!--        android:textColor="#009EFD"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAllCaps="true"-->
+<!--        -->
+<!--        android:text="Donate"/>-->
 
 </RelativeLayout>
