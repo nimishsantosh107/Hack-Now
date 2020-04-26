@@ -37,7 +37,11 @@ public class BusinessAdapter extends ArrayAdapter {
             //SET BG COLOR & HIDE BUTTON if AD
             if(businessItemList.get(position).getService().equals("ADS")) {
                 Button donate=view.findViewById(R.id.donateButton);
+                view.setBackgroundResource(R.drawable.ad_card);
                 donate.setVisibility(View.GONE);
+            }
+            else {
+                view.setBackgroundResource(R.drawable.donation_card);
             }
 
         }

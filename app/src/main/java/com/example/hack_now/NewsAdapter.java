@@ -1,13 +1,20 @@
 package com.example.hack_now;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.ColorSpace;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,8 +42,25 @@ public class NewsAdapter extends ArrayAdapter {
 
             title.setText(newsItemList.get(position).getTitle());
             desc.setText(newsItemList.get(position).getDesc());
-            //SET BG COLOR  depending on postedBy
 
+//            test.setBackground();
+            //Log.e("type",newsItemList.get(position).getPostedBy())
+
+            //SET BG COLOR  depending on postedBy
+            if(newsItemList.get(position).getPostedBy().equals("ADMIN")) {
+                Log.e("test","admin");
+                view.setBackgroundResource(R.drawable.admin_card);
+            }
+            else if(newsItemList.get(position).getPostedBy().equals("GOVT")) {
+                Log.e("test","govt");
+                view.setBackgroundColor(Color.WHITE);
+                view.setBackgroundResource(R.drawable.govt_card);
+            }
+            else if(newsItemList.get(position).getPostedBy().equals("WHO")){
+                Log.e("test","who");
+                view.setBackgroundResource(R.drawable.who_card);
+            }
+            Log.e("test","looping");
         }
         else
         {
