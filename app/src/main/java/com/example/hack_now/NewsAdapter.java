@@ -50,19 +50,14 @@ public class NewsAdapter extends ArrayAdapter {
 
             //SET BG COLOR  depending on postedBy
             if(newsItemList.get(position).getPostedBy().equals("ADMIN")) {
-                Log.e("test","admin");
                 view.setBackgroundResource(R.drawable.admin_card);
             }
             else if(newsItemList.get(position).getPostedBy().equals("GOVT")) {
-                Log.e("test","govt");
-                view.setBackgroundColor(Color.WHITE);
                 view.setBackgroundResource(R.drawable.govt_card);
             }
             else if(newsItemList.get(position).getPostedBy().equals("WHO")){
-                Log.e("test","who");
                 view.setBackgroundResource(R.drawable.who_card);
             }
-            Log.e("test","looping");
         }
         else
         {
