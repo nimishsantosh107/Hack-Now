@@ -14,4 +14,17 @@
         android:hint="hashtag"
         android:completionThreshold="1"
         />
+
+    <Button
+        android:id="@+id/broadcastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BROADCAST" />
+
+    <Button
+        android:id="@+id/streamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STREAM"/>
+
 </LinearLayout>
