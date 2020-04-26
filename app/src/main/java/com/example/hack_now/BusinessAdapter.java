@@ -1,6 +1,7 @@
 package com.example.hack_now;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.wallet.PaymentsClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,6 @@ import java.util.List;
 public class BusinessAdapter extends ArrayAdapter {
     List<BusinessItem> businessItemList=new ArrayList<>();
     Context mContext;
-    private PaymentsClient paymentsClient;
 
     public BusinessAdapter(Context context, int resource, List<BusinessItem> businessItemList) {
         super(context, resource, businessItemList);
@@ -41,7 +40,7 @@ public class BusinessAdapter extends ArrayAdapter {
             desc.setText(businessItemList.get(position).getDesc());
             //SET BG COLOR & HIDE BUTTON if AD
             if(businessItemList.get(position).getService().equals("ADS")) {
-                RelativeLayout donate=view.findViewById(R.id.googlePayButton);
+                RelativeLayout donate=view.findViewById(R.id.donate_btn);
                 view.setBackgroundResource(R.drawable.ad_card);
                 donate.setVisibility(View.GONE);
             }
@@ -56,4 +55,9 @@ public class BusinessAdapter extends ArrayAdapter {
         }
         return view;
     }
+    public void newpage(View view) {
+        Intent intent = new Intent(view.getContext(), PaymentActivity.class);
+        mContext.startActivity(intent);
+    }
+
 }
