@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 package com.example.hack_now.liveVideoPlayer;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -30,7 +29,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.hack_now.R;
 import com.google.android.exoplayer2.BuildConfig;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
@@ -69,6 +67,7 @@ import com.google.android.exoplayer2.util.Util;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.CookiePolicy;
+import com.example.hack_now.R;
 
 import static com.example.hack_now.HomeActivity.RTMP_BASE_URL;
 
@@ -143,7 +142,6 @@ public class LiveVideoPlayerActivity extends AppCompatActivity implements OnClic
 
   @Override
   public void onNewIntent(Intent intent) {
-    super.onNewIntent(intent);
     releasePlayer();
     shouldAutoPlay = true;
     clearResumePosition();
@@ -221,9 +219,6 @@ public class LiveVideoPlayerActivity extends AppCompatActivity implements OnClic
       trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
       player = ExoPlayerFactory.newSimpleInstance(this, trackSelector, new DefaultLoadControl(),
               null, extensionRendererMode);
-   //   player = ExoPlayerFactory.newSimpleInstance(this, trackSelector,
-   //           new DefaultLoadControl(new DefaultAllocator(true, C.DEFAULT_BUFFER_SEGMENT_SIZE),  500, 1500, 500, 1500),
-   //           null, extensionRendererMode);
       player.addListener(this);
 
       eventLogger = new EventLogger(trackSelector);
