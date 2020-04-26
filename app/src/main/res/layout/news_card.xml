@@ -5,8 +5,8 @@
     android:id="@+id/newsCard"
     android:orientation="vertical"
     android:paddingTop="20dp"
-    android:paddingBottom="20dp"
-    android:paddingLeft="20dp"
+    android:paddingBottom="30dp"
+    android:paddingLeft="30dp"
     android:paddingRight="20dp"
     android:background="@drawable/custom_postform">
 
@@ -17,6 +17,7 @@
         android:text="Nimshit"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:paddingBottom="5dp"
         />
 
     <TextView
@@ -24,6 +25,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/desc"
         android:text="Hello"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:paddingBottom="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/creator"
+        android:text="Dummy"
+        android:textSize="15dp"
+        android:layout_weight="0.5"/>
 
 </LinearLayout>

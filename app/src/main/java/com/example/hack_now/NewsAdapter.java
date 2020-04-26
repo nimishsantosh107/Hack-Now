@@ -39,9 +39,11 @@ public class NewsAdapter extends ArrayAdapter {
 
             TextView title =view.findViewById(R.id.title);
             TextView desc=view.findViewById(R.id.desc);
+            TextView creator=view.findViewById(R.id.creator);
 
             title.setText(newsItemList.get(position).getTitle());
             desc.setText(newsItemList.get(position).getDesc());
+            creator.setText("Posted By: "+newsItemList.get(position).getPostedBy());
 
 //            test.setBackground();
             //Log.e("type",newsItemList.get(position).getPostedBy())

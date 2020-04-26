@@ -17,6 +17,7 @@
         android:id="@+id/name"
         android:text=""
         android:textSize="30dp"
+        android:paddingBottom="5dp"
         android:textStyle="bold"
         />
 
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/desc"
         android:text=""
+        android:paddingBottom="5dp"
         android:textSize="20dp"
         android:layout_below="@+id/name"/>
 
@@ -38,6 +40,7 @@
         android:textColor="#009EFD"
         android:textStyle="bold"
         android:textAllCaps="true"
+        android:paddingBottom="5dp"
         android:text="Donate"/>
 
 </RelativeLayout>
