@@ -45,12 +45,15 @@ public class SocialFragment extends Fragment {
     ListView socialList;
 
     List<String> nameList1 = new ArrayList<String>();
-
-    List<String> nameList2 = Arrays.asList("Name3","Name4");
+    List<String> nameList2 = new ArrayList<String>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_social, container, false);
+        nameList1.add("Name1");
+        nameList1.add("Name2");
 
+        nameList2.add("Name3");
+        nameList2.add("Name4");
         if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mMessagesClient = Nearby.getMessagesClient(getContext(), new MessagesOptions.Builder()
@@ -69,7 +72,7 @@ public class SocialFragment extends Fragment {
                 Log.e("MESSAGE", "Found message: " + new String(message.getContent()));
                 String m = new String(message.getContent());
                 Log.e("M",m);
-                nameList1.add(0,m);
+                nameList1.add(m);
                 Log.e("NL10",nameList1.get(0));
                 Log.e("NL11",nameList1.get(1));
                 SocialAdapter socialAdapter = new SocialAdapter(getContext(), 0,nameList1);
@@ -82,7 +85,7 @@ public class SocialFragment extends Fragment {
             }
         };
 
-        mMessage = new Message("Admin".getBytes());
+        mMessage = new Message("Sanjay".getBytes());
 
         return root;
     }
