@@ -1,6 +1,7 @@
 package com.example.hack_now.liveVideoBroadcaster;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
@@ -62,8 +63,10 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
     private ILiveVideoBroadcaster mLiveVideoBroadcaster;
     private Button mBroadcastControlButton;
 
-    /** Defines callbacks for service binding, passed to bindService() */
-    private ServiceConnection mConnection = new ServiceConnection() {
+    /**
+     * Defines callbacks for service binding, passed to bindService()
+     */
+    private final ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName className,
@@ -77,6 +80,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
             }
             mLiveVideoBroadcaster.openCamera(Camera.CameraInfo.CAMERA_FACING_FRONT);
         }
+
         @Override
         public void onServiceDisconnected(ComponentName arg0) {
             mLiveVideoBroadcaster = null;
@@ -230,6 +234,7 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     public void toggleBroadcasting(View v) {
         if (!mIsRecording)
         {
