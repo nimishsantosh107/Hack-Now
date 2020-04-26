@@ -39,7 +39,7 @@ public class NewsFragment extends Fragment {
 
     //GET REQ
     void run() throws IOException{
-        String geturl="https://hacknow-abcdef.herokuapp.com/newsfeed";
+        String geturl="https://hacknow-275414.uc.r.appspot.com/newsfeed";
         OkHttpClient client=new OkHttpClient();
 
         Request request = new Request.Builder()
@@ -135,7 +135,7 @@ public class NewsFragment extends Fragment {
                     }
                 });
 
-                String postUrl= "https://hacknow-abcdef.herokuapp.com/newsfeed";
+                String postUrl= "https://hacknow-275414.uc.r.appspot.com/newsfeed";
                 String postBody="{\n" +
                         "    \"title\": \""+title+"\",\n" +
                         "    \"description\": \""+desc+"\",\n" +

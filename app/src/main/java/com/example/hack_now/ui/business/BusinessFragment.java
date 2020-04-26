@@ -30,7 +30,7 @@ public class BusinessFragment extends Fragment {
 
     ListView businessList;
     List <BusinessItem> businessItemList = new ArrayList<>();
-    public String url="https://hacknow-abcdef.herokuapp.com/helper";
+    public String url="https://hacknow-275414.uc.r.appspot.com/helper";
 
     void run() throws IOException {
         OkHttpClient client=new OkHttpClient();
