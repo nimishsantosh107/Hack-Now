@@ -15,25 +15,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/title"
-        android:text="Nimshit"
+        android:text=""
         android:textSize="30dp"
         android:textStyle="bold"
-        android:paddingBottom="5dp"
-        />
+        android:paddingBottom="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/desc"
-        android:text="Hello"
+        android:text=""
         android:textSize="20dp"
-        android:paddingBottom="5dp"/>
+        android:paddingBottom="5dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/creator"
-        android:text="Dummy"
+        android:text=""
         android:textSize="15dp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5" />
 
 </LinearLayout>

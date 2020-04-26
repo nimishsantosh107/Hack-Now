@@ -49,11 +49,13 @@ public class SocialFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_social, container, false);
-        nameList1.add("Name1");
-        nameList1.add("Name2");
+        nameList1.add("Kavya");
+        nameList1.add("Sanjay");
+        nameList1.add("Nimish");
 
-        nameList2.add("Name3");
-        nameList2.add("Name4");
+
+        nameList2.add("Shraddhaa");
+        nameList2.add("Nakul");
         if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mMessagesClient = Nearby.getMessagesClient(getContext(), new MessagesOptions.Builder()
@@ -85,7 +87,7 @@ public class SocialFragment extends Fragment {
             }
         };
 
-        mMessage = new Message("Sanjay".getBytes());
+        mMessage = new Message("Rahul".getBytes()); //rahul be the one who opens tracking first. reshma is the one who opens tracking second
 
         return root;
     }

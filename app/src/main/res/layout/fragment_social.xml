@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#41b3a3"
     android:padding="16dp">
+
 
     <ListView
         android:id="@+id/socialList"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
 

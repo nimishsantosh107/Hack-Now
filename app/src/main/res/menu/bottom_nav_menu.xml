@@ -3,8 +3,8 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_launcher_social_foreground"
-        android:title="Social" />
+        android:icon="@drawable/ic_launcher_soc_foreground"
+        android:title="Tracker" />
 
     <item
         android:id="@+id/navigation_dashboard"

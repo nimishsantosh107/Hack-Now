@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/newsCard"
     android:orientation="vertical"
@@ -8,16 +8,17 @@
     android:paddingBottom="30dp"
     android:paddingLeft="30dp"
     android:paddingRight="20dp"
-    android:layout_margin="10dp"
+    android:layout_margin="100dp"
     android:background="@drawable/custom_postform">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/name"
-        android:text="Nimshit"
+        android:text=""
         android:textSize="25dp"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:paddingBottom="5dp"
         />
 
