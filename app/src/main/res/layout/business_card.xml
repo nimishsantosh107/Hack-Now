@@ -43,7 +43,6 @@
         android:textStyle="bold"
         android:textAllCaps="true"
         android:text="Donate"
-        android:onClick="newpage"
         />
 
 

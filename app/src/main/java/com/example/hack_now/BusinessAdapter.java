@@ -40,12 +40,22 @@ public class BusinessAdapter extends ArrayAdapter {
             desc.setText(businessItemList.get(position).getDesc());
             //SET BG COLOR & HIDE BUTTON if AD
             if(businessItemList.get(position).getService().equals("ADS")) {
-                RelativeLayout donate=view.findViewById(R.id.donate_btn);
+                Button donate=view.findViewById(R.id.donate_btn);
                 view.setBackgroundResource(R.drawable.ad_card);
                 donate.setVisibility(View.GONE);
             }
             else {
                 view.setBackgroundResource(R.drawable.donation_card);
+                Button donate=view.findViewById(R.id.donate_btn);
+
+                donate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Context c = view.getContext();
+                        Intent intent = new Intent(view.getContext(), PaymentActivity.class);
+                        c.startActivity(intent);
+                    }
+                });
             }
 
         }
@@ -56,9 +66,7 @@ public class BusinessAdapter extends ArrayAdapter {
         return view;
     }
     public void newpage(View view) {
-        Context c = view.getContext();
-        Intent intent = new Intent(view.getContext(), PaymentActivity.class);
-        c.startActivity(intent);
+
     }
 
 }
