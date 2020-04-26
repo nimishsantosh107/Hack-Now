@@ -56,8 +56,9 @@ public class BusinessAdapter extends ArrayAdapter {
         return view;
     }
     public void newpage(View view) {
+        Context c = view.getContext();
         Intent intent = new Intent(view.getContext(), PaymentActivity.class);
-        mContext.startActivity(intent);
+        c.startActivity(intent);
     }
 
 }
