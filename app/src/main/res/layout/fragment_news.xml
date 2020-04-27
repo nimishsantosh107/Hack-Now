@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#41b3a3">
+    android:background="#fefefe">
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -69,9 +69,12 @@
         android:id="@+id/newsList"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="30dp"
         android:layout_below="@id/postLayout"
+
         />
 
 </RelativeLayout>
